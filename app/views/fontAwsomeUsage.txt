@@ -1,0 +1,28 @@
+ icon('fas', 'flag')
+# => <i class="fas fa-flag"></i>
+icon('far', 'address-book', class: 'strong')
+# => <i class="far fa-address-book strong"></i>
+icon('fab', 'font-awesome', 'Font Awesome', id: 'my-icon', class: 'strong')
+# => <i id="my-icon" class="fab fa-font-awesome strong"></i> Font Awesome
+
+<div class="field">
+ <%= form.label :activityType %>
+ <%= form.collection_select(:activityType, ActivityType.all, :id, :name) %>
+</div>
+
+<div class="field">
+  <%= form.label :activity_name %>
+  <%= form.text_field :activity_name, id: :activity_name %>
+</div>
+
+
+
+<div class="field">
+  <%= form.label :activity_date %>
+  <%= form.text_field :activity_date, id: :activity_date %>
+</div>
+
+<div class="field">
+  <%= form.label :activity_duration %>
+  <%= form.time_field :activity_duration, id: :activity_duration %>
+</div>

@@ -1,0 +1,35 @@
+
+
+
+<h1 class="page-title">My Activities</h1>
+
+<div class="table-responsive">
+  <table class="table table-striped table-sm ">
+
+  <thead class="thead-dark">
+    <tr>
+      <th>Name</th>
+      <th>Date</th>
+      <th>Duration</th>
+      <th colspan="3" class="text-center" >Actions</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @activities.each do |activity| %>
+      <tr>
+        <td><%= activity.activity_name %></td>
+        <td><%= activity.activity_date %></td>
+        <td><%= activity.activity_duration.to_formatted_s(:time) %></td>
+        <td><%=icon('fas', 'search-plus')%><%= link_to 'Display', activity %>  </td>
+        <td><%=icon('fas', 'edit')%><%= link_to 'Edit', edit_activity_path(activity) %></td>
+        <td><%=icon('fas', 'trash-alt')%><%= link_to 'Destroy', activity, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+ </table>
+ </div>
+
+<br>
+
+<%=icon('fas', 'file')%><%= link_to 'New Activity', new_activity_path %>

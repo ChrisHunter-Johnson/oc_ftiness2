@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  activity_name: MyString
+  activity_date: 
+  activity_duration: 
+
+two:
+  activity_name: MyString
+  activity_date: 
+  activity_duration: 
